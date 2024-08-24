@@ -1,23 +1,28 @@
+import java.util.*;
 public class Main{
     public static void main(String[] args){
     
-        Car car1 = new Car("1", "Model S", "Tesla", "Electric", 100);
-        Car car2 = new Car("2", "Civic", "Honda", "Sedan", 50);
+        ArrayList<Car> cars = new ArrayList<>();
+        cars.add(new Car("1", "Model S", "Tesla", "Electric", 100));
+        cars.add(new Car("2", "Civic", "Honda", "Sedan", 50));
 
-        Customer customer1 = new Customer("C1", "John Doe", "john@example.com");
-        Customer customer2 = new Customer("C2", "Jane Smith", "jane@example.com");
+        ArrayList<Customer> customers = new ArrayList<>();
+        customers.add(new Customer("C1", "John Doe", "john@example.com"));
+        customers.add(new Customer("C2", "Jane Smith", "jane@example.com"));
 
-        System.out.println(car1.getDetails());
-        System.out.println(car2.getDetails());
+        for(Car car : cars){
+            System.out.println(car.getDetails());
+        }
 
-        System.out.println(customer1.getDetails());
-        System.out.println(customer2.getDetails());
+        for(Customer customer : customers){
+            System.out.println(customer.getDetails());
+        }
 
-        System.out.println(car1.isAvailable());
-        car1.rent();
-        System.out.println(car1.isAvailable());
-        car1.returnCar();
-        System.out.println(car1.isAvailable());
+        System.out.println(cars.get(0).isAvailable());
+        cars.get(0).rent();
+        System.out.println(cars.get(0).isAvailable());
+        cars.get(0).returnCar();
+        System.out.println(cars.get(0).isAvailable());
         
 
     }
