@@ -13,6 +13,12 @@ public class Main{
         System.out.println(customer1.getDetails());
         System.out.println(customer2.getDetails());
 
+        System.out.println(car1.isAvailable());
+        car1.rent();
+        System.out.println(car1.isAvailable());
+        car1.returnCar();
+        System.out.println(car1.isAvailable());
+        
 
     }
 }
