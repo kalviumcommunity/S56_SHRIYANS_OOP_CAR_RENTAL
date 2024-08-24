@@ -14,6 +14,21 @@ public class Car {
         this.rentalPricePerDay = rentalPricePerDay;
         this.isAvailable = true;
     }
+    public String getId() {
+        return this.id; 
+    }
+
+    public boolean isAvailable() {
+        return this.isAvailable; 
+    }
+
+    public void rent() {
+        this.isAvailable = false; 
+    }
+
+    public void returnCar() {
+        this.isAvailable = true; 
+    }
     
     public String getDetails() {
         return "Car ID: " + id + ", Model: " + model + ", Brand: " + brand + ", Type: " + type + ", Price per Day: $" + rentalPricePerDay;
