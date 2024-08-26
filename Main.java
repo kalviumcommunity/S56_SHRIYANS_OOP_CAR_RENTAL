@@ -21,11 +21,14 @@ public class Main{
             System.out.println(customer.getDetails());
         }
 
-        System.out.println(cars.get(0).isAvailable());
-        cars.get(0).rent();
-        System.out.println(cars.get(0).isAvailable());
-        cars.get(0).returnCar();
-        System.out.println(cars.get(0).isAvailable());
+        // System.out.println(cars.get(0).isAvailable());
+        // cars.get(0).rent();
+        // System.out.println(cars.get(0).isAvailable());
+        // cars.get(0).returnCar();
+        // System.out.println(cars.get(0).isAvailable());
+
+        System.out.println("Total number of cars: " + Car.getCarCount());
+        System.out.println("Total number of customers: " + Customer.getCustomerCount());
         
 
     }
