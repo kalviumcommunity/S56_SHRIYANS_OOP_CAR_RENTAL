@@ -5,6 +5,7 @@ public class Car {
     private String type;
     public double rentalPricePerDay;
     private boolean isAvailable;
+    private static int carCount = 0;
 
     public Car(String id, String model, String brand, String type, double rentalPricePerDay) {
         this.id = id;
@@ -13,6 +14,7 @@ public class Car {
         this.type = type;
         this.rentalPricePerDay = rentalPricePerDay;
         this.isAvailable = true;
+        carCount++;
     }
     public String getId() {
         return this.id; 
@@ -32,6 +34,10 @@ public class Car {
     
     public String getDetails() {
         return "Car ID: " + id + ", Model: " + model + ", Brand: " + brand + ", Type: " + type + ", Price per Day: $" + rentalPricePerDay;
+    }
+
+    public static int getCarCount() {
+        return carCount;
     }
 
 }
