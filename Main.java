@@ -6,6 +6,9 @@ public class Main{
         cars.add(new Car("1", "Model S", "Tesla", "Electric", 100));
         cars.add(new Car("2", "Civic", "Honda", "Sedan", 50));
 
+
+        // Java does not have a delete keyword, unlike C++ where delete is used to manually deallocate memory that was previously allocated with new.
+
         ArrayList<Customer> customers = new ArrayList<>();
         customers.add(new Customer("C1", "John Doe", "john@example.com"));
         customers.add(new Customer("C2", "Jane Smith", "jane@example.com"));
