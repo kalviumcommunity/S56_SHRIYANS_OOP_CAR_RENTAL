@@ -7,6 +7,16 @@ public class Car {
     private boolean isAvailable;
     private static int carCount = 0;
 
+    public Car() {
+        this.id = "0";
+        this.model = "Unknown Model";
+        this.brand = "Unknown Brand";
+        this.type = "Unknown Type";
+        this.rentalPricePerDay = 0.0;
+        this.isAvailable = true;
+        carCount++;
+    }
+
     public Car(String id, String model, String brand, String type, double rentalPricePerDay) {
         this.id = id;
         this.model = model;
