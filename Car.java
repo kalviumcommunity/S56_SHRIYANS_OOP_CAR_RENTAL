@@ -40,4 +40,12 @@ public class Car {
         return carCount;
     }
 
+    public void setRentalPricePerDay(double rentalPricePerDay) {
+        this.rentalPricePerDay = rentalPricePerDay;
+    }
+
+    public void setAvailability(boolean isAvailable) {
+        this.isAvailable = isAvailable;
+    }
+
 }
