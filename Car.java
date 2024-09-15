@@ -1,5 +1,5 @@
 public class Car extends Vehicle {
-    private double rentalPricePerDay;
+    public double rentalPricePerDay;
     private boolean isAvailable;
     private static int carCount = 0;
 
