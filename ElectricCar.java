@@ -6,12 +6,17 @@ public class ElectricCar extends Car {
         this.batteryRange = batteryRange;
     }
 
-    public int getBatteryLife() {
+    public int getBatteryRange() {
         return batteryRange;
     }
 
     @Override
+    public double calculateRentalCost(int days) {
+        return days * getRentalPricePerDay();
+    }
+
+    @Override
     public String getDetails() {
-        return super.getDetails() + ", Battery Life: " + batteryRange + "Km";
+        return super.getDetails() + ", Battery Range: " + batteryRange + " Km";
     }
 }

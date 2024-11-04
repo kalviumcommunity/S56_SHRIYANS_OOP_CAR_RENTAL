@@ -11,9 +11,9 @@ public abstract class Vehicle {
         this.type = type;
     }
 
-    public abstract double getRentalPricePerDay();
+    public abstract double calculateRentalCost(int days);
+
     public String getDetails() {
         return "Vehicle ID: " + id + ", Model: " + model + ", Brand: " + brand + ", Type: " + type;
     }
-
 }
