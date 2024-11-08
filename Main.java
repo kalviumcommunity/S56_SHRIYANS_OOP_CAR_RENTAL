@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 public class Main {
@@ -8,7 +9,7 @@ public class Main {
         cars.add(new Car("2", "Civic", "Honda", "Sedan", 50));
         cars.add(new Car("3", "Accord", "Honda", "Sedan", 60));
 
-        cars.add(new ElectricCar("4", "Leaf", "Nissan", 80, 240)); // Corrected ID
+        cars.add(new ElectricCar("4", "Leaf", "Nissan", 80, 240)); 
         cars.add(new ElectricCar("5", "Bolt", "Chevy", 90, 300)); 
 
         ArrayList<Customer> customers = new ArrayList<>();
@@ -18,6 +19,7 @@ public class Main {
 
         for (Car car : cars) {
             System.out.println(car.getDetails());
+            System.out.println("Rental cost for 5 days: " + car.calculateRentalCost(5)); // Calculate rental cost for 5 days
         }
         System.out.println("----------------------------");
         for (Customer customer : customers) {
@@ -26,7 +28,6 @@ public class Main {
 
         System.out.println("Total number of cars: " + Car.getCarCount());
         System.out.println("Total number of customers: " + Customer.getCustomerCount());
-        // Rent and return a car using the RentalService
         RentalService.rentCar(cars.get(0));  // Rent the first car
         RentalService.returnCar(cars.get(0)); // Return the first car
     }

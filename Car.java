@@ -1,23 +1,27 @@
 public class Car extends Vehicle {
-    public double rentalPricePerDay;
+    private double rentalPricePerDay;
     private boolean isAvailable;
     private static int carCount = 0;
 
     public Car(String id, String model, String brand, String type, double rentalPricePerDay) {
-        super(id, model, brand, type); 
+        super(id, model, brand, type);
         this.rentalPricePerDay = rentalPricePerDay;
         this.isAvailable = true;
         carCount++;
     }
 
     public Car() {
-        super("0", "Unknown Model", "Unknown Brand", "Unknown Type"); 
+        super("0", "Unknown Model", "Unknown Brand", "Unknown Type");
         this.rentalPricePerDay = 0.0;
         this.isAvailable = true;
         carCount++;
     }
 
     @Override
+    public double calculateRentalCost(int days) {
+        return days * rentalPricePerDay; 
+    }
+
     public double getRentalPricePerDay() {
         return rentalPricePerDay;
     }
@@ -29,6 +33,7 @@ public class Car extends Vehicle {
     public static int getCarCount() {
         return carCount;
     }
+
     public void setRentalPricePerDay(double rentalPricePerDay) {
         this.rentalPricePerDay = rentalPricePerDay;
     }
