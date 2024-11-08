@@ -22,14 +22,6 @@ public class Car extends Vehicle {
         return rentalPricePerDay;
     }
 
-    public void rent() {
-        this.isAvailable = false;
-    }
-
-    public void returnCar() {
-        this.isAvailable = true;
-    }
-
     public boolean isAvailable() {
         return this.isAvailable;
     }
