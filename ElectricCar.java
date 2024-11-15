@@ -11,11 +11,6 @@ public class ElectricCar extends Car {
     }
 
     @Override
-    public double calculateRentalCost(int days) {
-        return days * getRentalPricePerDay();
-    }
-
-    @Override
     public String getDetails() {
         return super.getDetails() + ", Battery Range: " + batteryRange + " Km";
     }

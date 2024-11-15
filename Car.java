@@ -11,19 +11,10 @@ public class Car extends Vehicle {
         this.discountPolicy = new NoDiscount(); // Default policy
         carCount++;
     }
-
-    public Car() {
-        super("0", "Unknown Model", "Unknown Brand", "Unknown Type");
-        this.rentalPricePerDay = 0.0;
-        this.isAvailable = true;
-        this.discountPolicy = new NoDiscount(); // Default policy
-        carCount++;
-    }
-
     @Override
     public double calculateRentalCost(int days) {
         double rentalCost = days * rentalPricePerDay;
-        return discountPolicy.applyDiscount(rentalCost);
+        return DiscountManager.applyDiscount(discountPolicy, rentalCost);
     }
 
     public double getRentalPricePerDay() {
@@ -48,5 +39,9 @@ public class Car extends Vehicle {
 
     public void setDiscountPolicy(DiscountPolicy discountPolicy) {
         this.discountPolicy = discountPolicy;
+    }
+    @Override
+    public String getDetails() {
+        return super.getDetails() + ", Rental Price Per Day: " + rentalPricePerDay;
     }
 }
