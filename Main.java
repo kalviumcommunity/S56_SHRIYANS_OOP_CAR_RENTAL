@@ -33,5 +33,5 @@ public class Main {
         System.out.println("Total number of customers: " + Customer.getCustomerCount());
         RentalService.rentCar(cars.get(0));  // Rent the first car
         RentalService.returnCar(cars.get(0)); // Return the first car
-    }
-}
+    }}
+    
